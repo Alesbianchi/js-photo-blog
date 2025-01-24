@@ -17,7 +17,7 @@
 }
 .main-container {
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     background-image: url(../img/cork.png);
 }
 
@@ -30,7 +30,7 @@
     margin-bottom: 30px;
     /* DEBUG */
     /* border: solid 3px; */
-    
+
 }
 
 .container-label{
@@ -53,11 +53,11 @@
 .container-img .pin {
     position: absolute;
     /* Posiziona il pin fuori dal contenitore (fuori dalla parte superiore) */
-    top: -20px; 
+    top: -20px;
     /* Centra orizzontalmente il pin */
-    left: 50%; 
+    left: 50%;
     /* Centra esattamente l'immagine orizzontalmente */
-    transform: translateX(-50%); 
+    transform: translateX(-50%);
     width: 30px;
 }
 
@@ -86,4 +86,27 @@ h1{
 /* regole generali immagini in pagina */
 img{
     max-width: 100%;
+}
+
+
+/* MEDIA QUERY PER TABLET da 481px fino a 768 px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .container-label{
+        width: 40%;
+        
+        
+    }
+
+    .container{
+        width: 80%;
+        justify-content: space-evenly;
+    
+    }
+
+
+}
+
+/* MEDIA QUERY PER CELLULARE da 0px fino a 480px */
+@media (max-width: 480px) {
+    
 }
