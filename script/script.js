@@ -9,15 +9,30 @@ const endPoint = "https://lanciweb.github.io/demo/api/pictures/";
 
 //faccio partire la richiesta con axios per ricere le immagini relattive
 axios.get(endPoint)
-//in caso di successo
+    //in caso di successo
+    .then(responseObj =>{
+        const posts = responseObj.data;
+        // console.log(posts);
+        
+        //creo un ciclo sull'array ricevuta per estrapolare i suoi oggetti
+        for (let i = 0; i < posts.length; i++) {
 
-    //creo un ciclo sull'array ricevuta per estrapolare i suoi oggetti
+            //creo una variabile e valorizzo il ciclo
 
-    //creo una variabile e valorizzo il ciclo
+            //destrutturo l'ogetto
 
-    //destrutturo l'ogetto
+            //utilizzo il template literal per creare il template e copio il codice html per stamparlo in pagina
+            
+        }
+        
 
-    //utilizzo il template literal per creare il template e copio il codice html per stamparlo in pagina
+        
 
-    //altrimenti manda messaggio di errore
+
+
+        //altrimenti manda messaggio di errore
+    })   .catch(error => {
+
+    });
+        
 
