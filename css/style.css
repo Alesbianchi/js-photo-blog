@@ -57,11 +57,12 @@
 .container-img .pin {
     position: absolute;
     /* Posiziona il pin fuori dal contenitore (fuori dalla parte superiore) */
-    top: -30px; 
+    top: -20px; 
     /* Centra orizzontalmente il pin */
     left: 50%; 
     /* Centra esattamente l'immagine orizzontalmente */
     transform: translateX(-50%); 
+    width: 30px;
 }
 
 .container-img img {
