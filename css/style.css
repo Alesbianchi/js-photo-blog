@@ -90,7 +90,7 @@ img{
 
 
 /* MEDIA QUERY PER TABLET da 481px fino a 768 px */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 561px) and (max-width: 768px) {
     .container-label{
         width: 40%;
         
@@ -107,6 +107,13 @@ img{
 }
 
 /* MEDIA QUERY PER CELLULARE da 0px fino a 480px */
-@media (max-width: 480px) {
-    
+@media (max-width: 560px) {
+    .container-label{
+        width: 80%;
+        margin-bottom: 5%;
+        padding: 2%;
+        
+        
+        
+    }
 }
