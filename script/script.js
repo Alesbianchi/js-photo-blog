@@ -17,21 +17,35 @@ axios.get(endPoint)
         //creo un ciclo sull'array ricevuta per estrapolare i suoi oggetti
         for (let i = 0; i < posts.length; i++) {
 
-            //creo una variabile e valorizzo il ciclo
+            //creo una variabile e valorizzo il ciclo 
+            let post = posts[i]
+            console.log(post);
 
             //destrutturo l'ogetto
+            const {url, date, title } = post;
 
             //utilizzo il template literal per creare il template e copio il codice html per stamparlo in pagina
-            
+            label.innerHTML += `
+                <div class="container-label">
+
+                    <div class="container-img">
+                        <img class="pin" src="./img/pin.svg" alt="">
+                        <img src="${url}" alt="">
+                    </div>
+    
+                    <div class="container-text">
+                        <div class="date">${date}</div>
+                        <h2>${title}</h2>
+                    </div>
+                </div>
+  
+             `
         }
-        
-
-        
-
-
 
         //altrimenti manda messaggio di errore
     })   .catch(error => {
+        console.log(error);
+        
 
     });
         
