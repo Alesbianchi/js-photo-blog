@@ -5,11 +5,65 @@
     box-sizing: border-box;
 }
 
+/* regole container */
+.title{
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/wall.png);
+    height: 200px;
+}
+.main-container {
+    display: flex;
+    justify-content: center;  
+    margin-top: 30px;
+}
+
+.container{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* DEBUG */
+    border: solid 3px;
+    
+}
+
+.container-label{
+    width: 27%;
+    padding: 2%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    /* DEBUG */
+    border: 1px solid black;
+}
+
+.container-img{
+    display: flex;
+    justify-content: center;
+    height: 80%;
+}
+
+.container-text{
+    height: 20%;
+}
+
 /* font di pagina */
 h1, h3{
-    font-family: ‘Edu Tas Beginner’, sans-serif;
+    font-family: Edu Tas Beginner;
+}
+h1{
+    font-size: 100px;
+}
+h3{
+    margin-bottom: 30%;
 }
 
 .date{
     font-family: Sometype Mono;
+    margin-top: 10%;
+}
+
+/* regole generali immagini in pagina */
+img{
+    max-width: 100%;
 }
