@@ -1,0 +1,15 @@
+/* intestazione generale */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* font di pagina */
+h1, h3{
+    font-family: ‘Edu Tas Beginner’, sans-serif;
+}
+
+.date{
+    font-family: Sometype Mono;
+}
