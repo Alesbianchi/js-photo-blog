@@ -46,13 +46,9 @@
 .container-img{
     display: flex;
     justify-content: center;
-    height: 80%;
     position: relative;
 }
 
-.container-text{
-    height: 20%;
-}
 
 .container-img .pin {
     position: absolute;
@@ -79,10 +75,7 @@ h1{
     font-size: 80px;
 }
 
-h2{
-    margin-bottom: 40%;
-    
-}
+
 
 .date{
     font-family: Sometype Mono;
