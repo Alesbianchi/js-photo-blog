@@ -19,6 +19,7 @@
     display: flex;
     justify-content: center;
     background-image: url(../img/cork.png);
+    height: 100%;
 }
 
 .container{
@@ -43,6 +44,15 @@
     /* border: 1px solid black; */
 }
 
+/* aggiungo l'effetto hover */
+.container-label:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+    transform: rotate(20deg);
+    z-index: 100;
+}
+
 .container-img{
     display: flex;
     justify-content: center;
@@ -65,6 +75,8 @@
     max-width: 100%;
     height: auto;
 }
+
+
 
 /* font di pagina */
 h1, h2{
@@ -93,14 +105,14 @@ img{
 @media (min-width: 561px) and (max-width: 768px) {
     .container-label{
         width: 40%;
-        
-        
+
+
     }
 
     .container{
         width: 80%;
         justify-content: space-evenly;
-    
+
     }
 
 
@@ -112,8 +124,7 @@ img{
         width: 80%;
         margin-bottom: 5%;
         padding: 2%;
-        
-        
-        
+
     }
 }
+
