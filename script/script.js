@@ -64,8 +64,10 @@ axios.get(endPoint)
     });
 
     // Chiudi l'overlay quando clicchi sul bottone di chiusura
-    // rimuovo la classe sull'overlay l'overlay una volta cliccato 
-    // Nasconde l'overlay
+    closureButton.addEventListener('click', function() {
+        // rimuovo la classe sull'overlay l'overlay una volta cliccato 
+        overlay.classList.remove('show'); // Nasconde l'overlay
+    });
 
 })
 .catch(error => {
