@@ -146,7 +146,7 @@ Facciamo in modo di creare un overlay che copra l’intera pagina e all’intern
 
 .overlay {
     position: fixed; /* Posizione fissa sopra tutto */
-     display: none; 
+    display: none; 
     top: 0;
     left: 0;
     width: 100%;
