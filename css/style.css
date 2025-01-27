@@ -146,10 +146,19 @@ Facciamo in modo di creare un overlay che copra l’intera pagina e all’intern
 
 .overlay {
     position: fixed; /* Posizione fissa sopra tutto */
+    /* display: none; */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Colore di sfondo semitrasparente */
     z-index: 1000; /* Più alto di tutto il resto */
+}
+.img-over{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Sposta l'immagine indietro sull'asse x e sull'asse y per centrarla esattamente */
+    z-index: 1001; /* Più alto dell'overlay */
+    
 }
