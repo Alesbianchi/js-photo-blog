@@ -4,12 +4,11 @@
 //seleziono gli elementi di ouput
 const label = document.querySelector(".container");
 const closureButton = document.querySelector('.closure-button');
-
 //richiamo l'elemento di output che dovrò ingrandire
 const overlay = document.querySelector('.overlay');
 
 // Seleziona tutte le immagini che apriranno l'overlay
-const openOverlayImages = document.querySelectorAll('.open-overlay');
+
 const imgOver = document.querySelector('.img-over');
 
 
@@ -44,31 +43,31 @@ axios.get(endPoint)
             </div>
         `;
     });
-
     
+    //richiamo la costante all'interno del ciclo
+    const openOverlayImages = document.querySelectorAll('.open-overlay');
     // Funzione per aprire l'overlay con l'immagine cliccata
     function openOverlay(imgSrc) {
-        // Mostra l'overlay
+        // Mostra l'overlay aggiungendo la classe
         overlay.classList.add('show'); 
         // Cambia l'immagine nell'overlay con quella cliccata
         imgOver.src = imgSrc; 
     }
-    
-
     // Aggiungi l'evento di clic su tutte le immagini
-        //aggiungo la funzione sul click dell'utente
-        // Passa l'src dell'immagine al metodo openOverlay
-
-
+    //aggiungo la funzione sul click dell'utente
+    // Passa l'src dell'immagine al metodo openOverlay
 
     // Chiudi l'overlay quando clicchi sul bottone di chiusura
-        // rimuovo la classe sull'overlay l'overlay una volta cliccato 
-
+    // rimuovo la classe sull'overlay l'overlay una volta cliccato 
+    // Nasconde l'overlay
 
 })
 .catch(error => {
     console.log(error);
 });
+    
+
+
 
 
 
