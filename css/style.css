@@ -1,9 +1,14 @@
+
+
 /* intestazione generale */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
 
 /* regole container */
 .title{
@@ -19,7 +24,11 @@
     display: flex;
     justify-content: center;
     background-image: url(../img/cork.png);
-    height: 100%;
+    background-size: cover; 
+    /* faccio in modo che sia posizionato sotto al contenitore overlay */
+    position:fixed;
+    /* valore piu basso */
+    z-index: 999; 
 }
 
 .container{
@@ -28,11 +37,13 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 30px;
-    margin-bottom: 30px;
+    /* per evitare lo spazio bianco rimpicciolendo la pagina do piu margine in basso */
+    margin-bottom: 500px;
     /* DEBUG */
     /* border: solid 3px; */
 
 }
+
 
 .container-label{
     width: 27%;
@@ -46,17 +57,19 @@
 
 /* aggiungo l'effetto hover */
 .container-label:hover {
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1);
+    -ms-transform: scale(1.1); 
     transform: rotate(20deg);
     z-index: 100;
 }
+
+/* creo regole per poter ingrandire le foto con l'utilizzo di JS */
+
 
 .container-img{
     display: flex;
     justify-content: center;
     position: relative;
+    
 }
 
 
@@ -128,3 +141,15 @@ img{
     }
 }
 
+/* Milestone 1
+Facciamo in modo di creare un overlay che copra l’intera pagina e all’interno, centrata, disponiamo un’immagine qualunque ed un button di chiusura. */
+
+.overlay {
+    position: fixed; /* Posizione fissa sopra tutto */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Colore di sfondo semitrasparente */
+    z-index: 1000; /* Più alto di tutto il resto */
+}

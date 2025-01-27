@@ -4,8 +4,12 @@
 //seleziono gli elementi di ouput
 const label = document.querySelector(".container");
 
+//richiamo l'elemento di output che dovrò ingrandire
+
+
 //creo una costante e setto i parametri dell'endpoint
 const endPoint = "https://lanciweb.github.io/demo/api/pictures/";
+
 
 //faccio partire la richiesta con axios per ricere le immagini relattive
 axios.get(endPoint)
@@ -26,7 +30,7 @@ axios.get(endPoint)
 
             //utilizzo il template literal per creare il template e copio il codice html per stamparlo in pagina
             label.innerHTML += `
-                <div class="container-label">
+                <div class="container-label fullpage">
 
                     <div class="container-img">
                         <img class="pin" src="./img/pin.svg" alt="">
