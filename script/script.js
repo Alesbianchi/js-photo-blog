@@ -3,8 +3,15 @@
 
 //seleziono gli elementi di ouput
 const label = document.querySelector(".container");
+const closureButton = document.querySelector('.closure-button');
 
 //richiamo l'elemento di output che dovrò ingrandire
+const overlay = document.querySelector('.overlay');
+
+// Seleziona tutte le immagini che apriranno l'overlay
+const openOverlayImages = document.querySelectorAll('.open-overlay');
+const imgOver = document.querySelector('.img-over');
+
 
 
 //creo una costante e setto i parametri dell'endpoint
@@ -18,39 +25,47 @@ axios.get(endPoint)
         const posts = responseObj.data;
         // console.log(posts);
         
-        //creo un ciclo sull'array ricevuta per estrapolare i suoi oggetti
-        for (let i = 0; i < posts.length; i++) {
+       // Cicla attraverso ogni post e genera dinamicamente il contenuto
+       posts.forEach(post => {
+        const { url, date, title } = post;
 
-            //creo una variabile e valorizzo il ciclo 
-            let post = posts[i]
-            console.log(post);
-
-            //destrutturo l'ogetto
-            const {url, date, title } = post;
-
-            //utilizzo il template literal per creare il template e copio il codice html per stamparlo in pagina
-            label.innerHTML += `
-                <div class="container-label fullpage">
-
-                    <div class="container-img">
-                        <img class="pin" src="./img/pin.svg" alt="">
-                        <img src="${url}" alt="">
-                    </div>
-    
-                    <div class="container-text">
-                        <div class="date">${date}</div>
-                        <h2>${title}</h2>
-                    </div>
+        // Aggiungi un contenitore con immagine e testo
+        label.innerHTML += `
+            <div class="container-label fullpage">
+                <div class="container-img">
+                    <img class="pin" src="./img/pin.svg" alt="">
+                    <img src="${url}" alt="" class="open-overlay">
                 </div>
-  
-             `
-        }
 
-        //altrimenti manda messaggio di errore
-    })   .catch(error => {
-        console.log(error);
-        
-
+                <div class="container-text">
+                    <div class="date">${date}</div>
+                    <h2>${title}</h2>
+                </div>
+            </div>
+        `;
     });
+
+    
+    // Funzione per aprire l'overlay con l'immagine cliccata
+        // Mostra l'overlay aggiungendo la classe
+        // Cambia l'immagine nell'overlay con quella cliccata
+    
+
+    // Aggiungi l'evento di clic su tutte le immagini
+        //aggiungo la funzione sul click dell'utente
+        // Passa l'src dell'immagine al metodo openOverlay
+
         
+
+    // Chiudi l'overlay quando clicchi sul bottone di chiusura
+        // rimuovo la classe sull'overlay l'overlay una volta cliccato 
+
+
+})
+.catch(error => {
+    console.log(error);
+});
+
+
+
 
