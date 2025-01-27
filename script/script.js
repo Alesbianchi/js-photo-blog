@@ -53,9 +53,15 @@ axios.get(endPoint)
         // Cambia l'immagine nell'overlay con quella cliccata
         imgOver.src = imgSrc; 
     }
+    
     // Aggiungi l'evento di clic su tutte le immagini
+    openOverlayImages.forEach(image => {
     //aggiungo la funzione sul click dell'utente
-    // Passa l'src dell'immagine al metodo openOverlay
+        image.addEventListener('click', function() {
+            // Passa l'src dell'immagine al metodo openOverlay
+            openOverlay(image.src); ù
+        });
+    });
 
     // Chiudi l'overlay quando clicchi sul bottone di chiusura
     // rimuovo la classe sull'overlay l'overlay una volta cliccato 
@@ -66,6 +72,8 @@ axios.get(endPoint)
     console.log(error);
 });
     
+
+
 
 
 
